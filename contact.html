@@ -24,27 +24,25 @@
     <article class="main">
            <h1 class="page-heading">Contact</h1>
            <div id="form">
-                <form action="process.php">
+                <form action="#" method="post" onsubmit="return false;">
                     <p>
                      <label for="name">Name:</label>
-                     <input type="text"  name="name">
+                     <input type="text" id="name" name="name" required maxlength="50" pattern="[A-Za-z\s]+">
                     </p>
                      <p>
-                    
                      <label for="email">Email:</label>
-                     <input type="email" name="email" >
+                     <input type="email" id="email" name="email" required maxlength="100">
                      </p>
                      <p>
-                   
                      <label for="subject">Subject:</label>
-                     <input type="text" name="subject">
+                     <input type="text" id="subject" name="subject" required maxlength="100">
                      </p>
                      <p>
-                     <label for="message"></label>
-                     <textarea  id="message" name="message" cols="30" rows="10" ></textarea>
+                     <label for="message">Message:</label>
+                     <textarea id="message" name="message" cols="30" rows="10" required maxlength="500" placeholder="Your message here..."></textarea>
                      </p>
                      <p>
-                     <button name="submit" id ="submit" type="submit">Send</button>
+                     <button name="submit" id="submit" type="submit" onclick="alert('Thank you! This is a demo form.')">Send</button>
                      </p>
                 </form>
            </div>
